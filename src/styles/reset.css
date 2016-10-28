@@ -1,0 +1,30 @@
+/* ==================================================================
+   Reset
+   ================================================================== */
+
+@import "styles/colors";
+@import "styles/sizes";
+@import "styles/typography";
+
+:global {
+  body {
+    background: var(--color-cararra);
+    font-family: Helvetica;
+    margin: 0;
+  }
+
+  a {
+    color: var(--color-paradiso);
+  }
+
+  em {
+    font-style: normal;
+    text-decoration: underline;
+  }
+
+  /* Remove autofill background in inputs
+  -------------------------------------------------- */
+  input:-webkit-autofill {
+    box-shadow: 0 0 0 1000px rgba(255, 255, 255, 1) inset;
+  }
+}

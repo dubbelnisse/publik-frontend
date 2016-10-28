@@ -1,0 +1,16 @@
+/* ==================================================================
+   Start
+   ================================================================== */
+
+@import "styles/colors.css";
+@import "styles/sizes.css";
+@import "styles/typography.css";
+
+/* Composes
+-------------------------------------------------- */
+.start {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}

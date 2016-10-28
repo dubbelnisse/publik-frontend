@@ -1,0 +1,47 @@
+/* ==================================================================
+   Sizes
+   ================================================================== */
+
+:root {
+  --width: 1000px;
+  --spacing: 30px;
+  --spacing-medium: 20px;
+  --spacing-half: calc(var(--spacing) / 2);
+  --spacing-third: calc(var(--spacing) / 3);
+  --spacing-large: 50px;
+  --spacing-xlarge: 60px;
+
+  --border-width: 3px;
+  --border-type: solid;
+
+  --z-notification: 1000;
+
+  @custom-media --bp-small (max-width: 24em);      /* iPhone 5 */
+  @custom-media --bp-small-2 (max-width: 29.75em);
+  @custom-media --bp-small-3 (max-width: 39.8em);
+  @custom-media --bp-med (max-width: 46.8em);      /* iPhone 6+ */
+  @custom-media --bp-med-2 (max-width: 48em);
+  @custom-media --bp-large (max-width: 50em);      /* iPad Mini portrait */
+  @custom-media --bp-large-2 (max-width: 54.5em);
+  @custom-media --bp-xl (max-width: 60em);
+  @custom-media --bp-xl-2 (max-width: 67em);       /* iPad Mini landscape */
+}
+
+/* Composes
+-------------------------------------------------- */
+@each $direction in (top, right, bottom, left) {
+  @each $margin in (0, 5, 10, 15, 20, 30, 50) {
+    .margin-$(direction)-$(margin) {
+      margin-$(direction): $(margin)px;
+    }
+
+    .padding-$(direction)-$(margin) {
+      box-sizing: border-box;
+      padding-$(direction): $(margin)px;
+    }
+  }
+}
+
+.content-wrap {
+  margin: var(--spacing-large) 0;
+}

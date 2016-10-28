@@ -1,0 +1,16 @@
+/* ==================================================================
+   App
+   ================================================================== */
+
+@import "styles/colors";
+@import "styles/reset";
+@import "styles/sizes";
+@import "styles/typography";
+
+/* Global
+-------------------------------------------------- */
+:global {
+  body {
+    background: var(--color-emerald);
+  }
+}
