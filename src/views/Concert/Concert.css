@@ -1,0 +1,16 @@
+/* ==================================================================
+   Concert
+   ================================================================== */
+
+@import "styles/colors.css";
+@import "styles/sizes.css";
+
+.wrap {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.setlist {
+  min-width: 500px;
+}

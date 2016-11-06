@@ -12,7 +12,6 @@ function handleErrors (response) {
 export function get (route) {
   const options = {
     headers: {
-      'Authorization': `Bearer ${localStorage.token}`,
       'Content-Type': 'application/json'
     },
     method: 'GET'

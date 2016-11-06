@@ -1,0 +1,11 @@
+/* ==================================================================
+   Link
+   ================================================================== */
+
+@import "styles/colors.css";
+@import "styles/sizes.css";
+
+.wrap {
+  cursor: pointer;
+  text-decoration: underline;
+}

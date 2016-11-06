@@ -1,3 +1,3 @@
 export default {
-  BASE_URL: process.env.API__URL
+  BASE_URL: 'http://publik-api.nilssonnils.se/'
 }
