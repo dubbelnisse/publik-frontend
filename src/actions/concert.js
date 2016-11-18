@@ -1,5 +1,6 @@
 import { get } from '../core/httpClient'
 import { createAction } from 'redux-actions'
+import { getList } from '../utils/youtube'
 
 export const CONCERT_FETCH = 'CONCERT_FETCH'
 export const CONCERT_UPDATE = 'CONCERT_UPDATE'
@@ -23,7 +24,12 @@ export function getConcert (id) {
     dispatch(concertFetch())
 
     get(`/concert/${id}`)
-      .then(result => dispatch(concertUpdate(result.data)))
+      .then(res => {
+        return getList(res.data.playlistId)
+          .then(videoList => Object.assign(res.data, { videoList }))
+          .catch(err => console.log(err))
+      })
+      .then(res => dispatch(concertUpdate(res)))
       .catch(error => dispatch(concertError(error)))
   }
 }

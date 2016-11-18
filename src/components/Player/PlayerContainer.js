@@ -1,27 +1,32 @@
-import React, { Component, PropTypes } from 'react'
+import React, { PropTypes, Component } from 'react'
 import { connect } from 'react-redux'
-import YT from '../../utils/youtube'
 import Player from './Player'
+import { onYouTubeIframeAPIReady } from '../../utils/youtube'
 
 export class PlayerContainer extends Component {
   componentDidMount () {
-    YT.getList(this.props.playlistId)
+    setTimeout(() => {
+      console.log(this.props.videoList)
+      onYouTubeIframeAPIReady(this.props.videoList)
+    }, 1000)
   }
 
   render () {
     return (
-      <Player playlistId={this.props.playlistId} />
+      <Player />
     )
   }
 }
 
 PlayerContainer.propTypes = {
-  playlistId: PropTypes.string
+  playlistId: PropTypes.string,
+  videoList: PropTypes.string
 }
 
 function mapStateToProps (state) {
   return {
-    playlistId: state.concert.playlistId
+    playlistId: state.concert.playlistId,
+    videoList: state.concert.videoList
   }
 }
 

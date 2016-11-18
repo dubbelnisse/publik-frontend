@@ -23,6 +23,20 @@ export function get (route) {
     .catch(error => Promise.reject(error))
 }
 
+export function getExternal (route) {
+  const options = {
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    method: 'GET'
+  }
+
+  return fetch(route, options)
+    .then(handleErrors)
+    .then(response => response.json())
+    .catch(error => Promise.reject(error))
+}
+
 export function post (route, payload) {
   let options = {
     headers: {
@@ -98,5 +112,6 @@ export default {
   remove,
   get,
   post,
-  put
+  put,
+  getExternal
 }
