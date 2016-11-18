@@ -1,17 +1,10 @@
 /* ==================================================================
-   Concert
+   Player
    ================================================================== */
 
 @import "styles/colors.css";
 @import "styles/sizes.css";
 
 .wrap {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.setlist {
-  min-width: 500px;
+  width: 100%;
 }

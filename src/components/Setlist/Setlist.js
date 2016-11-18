@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import CSSModules from 'react-css-modules'
 import styles from './Setlist.css'
 import SetlistItem from './SetlistItem'
-import Link from '../Link'
+import Link from '../../components/Link'
 
 export const Setlist = ({ setlist }) => {
   if (setlist.length === 0) { return null }

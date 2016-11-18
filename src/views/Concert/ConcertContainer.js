@@ -6,7 +6,6 @@ import * as ConcertActions from '../../actions/concert'
 
 export class ConcertContainer extends Component {
   componentDidMount () {
-    console.log(this.props.params)
     this.props.concertActions.getConcert(this.props.params.id)
   }
 
